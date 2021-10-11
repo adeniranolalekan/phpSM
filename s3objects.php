@@ -37,7 +37,6 @@ $s3 = new S3Client([
     'region'  => 'eu-west-1'
 ]);
 $bucket = 'phpsmbucket';
-// Use the high-level iterators (returns ALL of your objects).
 try {
     $results = $s3->getPaginator('ListObjects', [
         'Bucket' => $bucket

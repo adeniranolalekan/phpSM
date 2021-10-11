@@ -47,13 +47,7 @@ if(isset($result['SecretString'])){
  $secret =$result['SecretString'];
 
 }
-/*$username= $client->getSecretValue([
-'username' => $secretName,
-]);
-$password= $client->getSecretValue([
-'password' => $secretName,
-]);
-*/
+
 $secretObj=json_decode($secret);
 $host=$secretObj->host;
 $username=$secretObj->username;
